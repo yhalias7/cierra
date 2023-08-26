@@ -15,27 +15,10 @@
                     <b-form-group>
                         <b-form-input v-model="data.email" placeholder="Email" type="email" class="mb-3" required></b-form-input>
                     </b-form-group>
-                    <!-- <vue-dropzone 
-                        ref="myVueDropzone" 
-                        id="dropzone" 
-                        class="signature-dropzone"
-                        :class="{'hasError' : hasError & !data.imageUrl}"
-                        :options="dropzoneOptions" 
-                        :useCustomSlot=true 
-                        @vdropzone-success="onDropzoneSuccess">
-                        <div class="dropzone-custom-content">
-                            <img src="@/assets/img/icon.png">
-                            <div>
-                                <a href="#" class="upload-link">Lade eine Datei</a> hoch oder nutze drag-and-drop
-                            </div>
-                            <div class="subtitle">PNG, JPEG and JPG are allowed</div>
-                        </div>
-                    </vue-dropzone> -->
                     <image-dropzone
                         :hasError="hasError"
                         @uploadSuccess="uploadSuccess"
-                    >
-                    </image-dropzone>
+                    />
                 </div>
             <div class="form-action">
                 <b-button  type="submit" class="generate-button">Generate</b-button>
@@ -47,8 +30,6 @@
 
 <script>
 import { mapActions } from 'vuex';
-// import vue2Dropzone from 'vue2-dropzone'
-import 'vue2-dropzone/dist/vue2Dropzone.min.css'
 import ImageDropzone from './includes/ImageDropzone'
 export default {
     components: {
@@ -62,11 +43,6 @@ export default {
                 email: null,
                 imageUrl: null
             },
-            // dropzoneOptions: {
-            //     url: 'https://api.imgbb.com/1/upload?key=0191734d3a3acbb1d96464b9dc1f4331',
-            //     paramName: 'image',
-            //     acceptedFiles: 'image/jpeg, image/jpg, image/png',
-            // },
             hasError: false,
         };
     },
