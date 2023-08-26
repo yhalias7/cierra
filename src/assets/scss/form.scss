@@ -1,0 +1,122 @@
+
+.form-container {
+width: 90%;
+max-width: 570px;
+margin: 0 auto;
+background: linear-gradient(0deg, #01182f, #01182f),
+    linear-gradient(0deg, #f35627, #f35627);
+border: 1px solid rgba(243, 86, 39, 1);
+margin-top: 50px;
+border-radius: 12px;
+padding: 48px 32px 32px 32px;
+
+.form-title-container {
+    width: 100%;
+    text-align: center;
+}
+
+.form-title-text {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 254, 253, 1);
+}
+
+.form-control {
+    width: 504px;
+    height: 48px;
+    border-radius: 6px;
+    border: 1px solid rgba(72, 101, 129, 1);
+    background: transparent !important;
+    color: #ffffff !important;
+
+    &::placeholder {
+        color: rgba(159, 179, 200, 1) !important;
+    }
+}
+
+.dropzone-custom-content {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 254, 253, 1);
+
+    a.upload-link {
+        color: rgba(243, 86, 39, 1);
+        text-decoration: none;
+    }
+
+    .subtitle {
+        color: rgba(159, 179, 200, 1);
+    }
+}
+
+.signature-dropzone {
+    padding: 16px 26px;
+    border-radius: 4px;
+    gap: 4px;
+    color: rgba(72, 101, 129, 1);
+    border: 2px dotted rgba(72, 101, 129, 1);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.hasError {
+    border: 2px dotted rgb(202, 4, 4) !important;
+}
+.succesUpload {
+    border: 2px dotted rgb(3, 94, 30) !important;
+}
+.form-action {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+
+    .generate-button {
+    min-width: 145px;
+    height: 50px;
+    padding: 12px 32px;
+    border-radius: 6px;
+    gap: 10px;
+    background: rgba(243, 86, 39, 1);
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+
+    &:hover {
+        background: rgb(197, 65, 25);
+    }
+    }
+}
+
+// Media query for smaller devices
+@media (max-width: 768px) {
+    .logo-container {
+    padding-top: 30px; // Adjust padding for smaller devices
+    }
+
+    .form-container {
+    padding: 24px 16px; // Adjust padding for smaller devices
+    }
+
+    .form-title-text {
+    font-size: 18px; // Reduce font size for smaller devices
+    }
+
+    .form-control {
+    width: 100%; // Make form controls full width on smaller devices
+    }
+
+    .generate-button {
+    width: 100%; // Make button full width on smaller devices
+    margin-top: 20px; // Add margin for spacing
+    }
+}
+}

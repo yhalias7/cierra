@@ -1,0 +1,182 @@
+
+.title-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 70px;
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+    }
+}
+.signature-container {
+    width: 90%;
+    max-width: 570px;
+    margin: 20px auto;
+    .signature-card {
+        width: 100%;
+        min-height: 230px;
+        border: 1px solid rgba(188, 204, 220, 1);
+        border-radius: 12px;
+        background: linear-gradient(to right, rgba(1, 24, 47, 1) 100px, transparent 100px, transparent 100%);
+        display: flex;
+        .profile-photo {
+            flex: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                width: 117px;
+                height: 146px;
+                border-top: 0;
+                border-right: 0;
+                margin-top: -2px;
+                margin-right: -2px;
+                z-index: 100;
+            }
+            .profile-border{
+                max-width: 100%;
+                max-height: 100%;
+                width: 117px;
+                height: 146px;
+                border: 1px solid #f35627 !important;
+                position: absolute;
+                z-index: 1;
+                margin-top: 5px;
+                margin-right: 5px;
+                z-index: 1;
+            }
+        }
+        .signature-details {
+            flex: 70%;
+            display: flex;
+            padding: 25px 0;
+            .information {
+                flex: 60%;
+                position: relative;
+                .name {
+                    color: rgba(243, 86, 39, 1);
+                    font-size: 30px;
+                    font-weight: 500;
+                    line-height: 36px;
+                    letter-spacing: 0.02em;
+                    margin-bottom: 0.5rem;
+                }
+                .title {
+                    color: rgba(72, 101, 129, 1);
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0.02em;
+                    
+                }
+                .contacts-container{
+                    display: flex;
+                    .contact {
+                        flex: 50%;
+                        color: rgba(36, 59, 83, 1);
+                        font-size: 10px;
+                        line-height: 14px;
+                        letter-spacing: 0.03em;
+                        .contact-title {
+                            color: rgba(243, 86, 39, 1);
+                            margin-bottom: 0.3rem;
+                        }
+                        
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 40%;
+                        right: 0; /* Adjust this value to control the position of the border */
+                        height: 60%;
+                        width: 10px; /* Adjust this value to control the width of the border */
+                        background: url('~@/assets/img/signature-border.png'); /* URL of your border image */
+                        transform: translateX(100%); /* Move the border image to the right */
+                        z-index: -1; /* Place the border image behind the content */
+                    }
+                    
+                }
+
+            }
+            .social-container {
+                flex: 40%;
+                .img-logo {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 30px;
+                }
+                .social-media {
+                    display: flex;
+                    align-items: center;
+                    // justify-content: center;
+                    height: 80%;
+                    padding-left: 40px;
+                    ul {
+                        list-style: none;
+                        padding-left: 20px;
+                        font-size: 12px;
+                        line-height: 22px;
+                        letter-spacing: 0.02em;
+                        color: rgba(72, 101, 129, 1);
+
+                        li::before {
+                            content: "\2022"; 
+                            color: rgba(243, 86, 39, 1); 
+                            display: inline-block;
+                            font-size: 16px;
+                            width: 1em; 
+                            margin-left: -1em;
+                        }
+                        
+                        a {
+                            text-decoration: none;
+                            color: rgba(72, 101, 129, 1);
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+.action-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+
+    .copy-button {
+    min-width: 145px;
+    height: 50px;
+    padding: 12px 32px;
+    border-radius: 6px;
+    gap: 10px;
+    background: rgba(243, 86, 39, 1);
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+
+        &:hover {
+            background: rgb(197, 65, 25);
+        }
+    }
+    .is-copied {
+        background: rgba(23, 180, 133, 1) !important;
+    }
+}
+@media (max-width: 768px) {
+  .signature-container {
+    .signature-card {
+      zoom: 0.6; /* Adjust the zoom value as needed */
+    }
+  }
+}

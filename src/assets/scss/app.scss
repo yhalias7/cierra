@@ -1,0 +1,13 @@
+
+body {
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Gilroy', sans-serif;
+    background: #fffefd;
+    background-image:  url('~@/assets/img/bg-right.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8%) top;
+    background-size: auto 100%;
+    margin: 0;
+    padding-bottom: 150px;
+}
